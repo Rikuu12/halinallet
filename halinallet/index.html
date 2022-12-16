@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue@2.4.3/dist/vue.js"></script>
         <title>Page</title>
     </head>
     <body>
@@ -18,5 +19,40 @@
               <li class="grey"><a href="#" class="button">Nyky hinta</a></li>
             </ul>
           </div> 
+          <script language="javascript">
+
+            var vueObject = new Vue({
+                       el: '#app',
+                       data: {
+                          answer: "",
+    
+    
+                       },
+                       methods: {
+                         findData: function ()
+                         {
+                        let url1 = ("http://www.boredapi.com/api/activity/") // Tähän vaihda oikea url 
+    
+    
+                        axios.get (url1)
+                          /* Tässä suodatetaan tulevasta JSONISTA tarvittavat datat ja heijastetaan VUE/HTML osioon {{answer}} */
+                            .then((response) => {
+                                let filter = response.data.activity; 
+    
+                                this.answer = filter ;
+    
+    
+                              });
+                         }
+    
+                       },
+                       mounted: function () {
+                        this.data();
+                       },
+    
+    
+                     })
+                 </script>
+    
     </body>
 </html> 
