@@ -46,6 +46,8 @@ html{
 .button:hover{
     background-color: #111;
     color: white;
+    transition: .5s;
+    cursor: pointer;
 }
 
 #date{
