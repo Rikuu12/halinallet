@@ -8,18 +8,31 @@
         <title>Page</title>
     </head>
     <body>
-        <div id="app" class="columns">
+        <div class="columns">
             <ul class="price">
-              <li class="header">Sähkön hinta tänää:</li>
-              <li class="grey">€ 9.99 / kwh</li>
-              <li>Halpa hinta</li>
-              <li>Saunan voi laittaa päälle.</li>
-              <li>Tietokonetta voi käyttää.</li>
-              <li>Ei kannata lämmittää uunia.</li>
-              <li class="grey"><a @click="findData()" class="button">Nyky hinta</a></li>
+                <li class="header">Sähkön hinta tänään:</li>
+                <li class="grey">€ 9.99 / kwh</li>
+                <li>Halpa hinta</li>
+                <li>Saunan voi laittaa päälle.</li>
+                <li>Tietokonetta voi käyttää.</li>
+                <li>Ei kannata lämmittää uunia.</li>
+                <li class="grey"><a @click="findData()" class="button">Nyky hinta</a></li>
             </ul>
         </div> 
-          <script language="javascript">
+        <div class="columns">
+            <ul class="price">
+                <li class="header">Sähkön hinta (Tähän päivämäärä jonka käyttäjä syöttää):</li>
+                <li class="grey">€ 9.99 / kwh</li>
+                <li>Halpa hinta</li>
+                <li>Saunan voi laittaa päälle.</li>
+                <li>Tietokonetta voi käyttää.</li>
+                <li>Ei kannata lämmittää uunia.</li>
+                <input type="text" id="date" name="date" placeholder="Anna päivämäärä">
+                <li class="grey"><a @click="#" class="button">Tarkista hinta</a></li>
+            </ul>
+        </div> 
+
+        <script language="javascript">
 
             var vueObject = new Vue({
                        el: '#app',
@@ -53,6 +66,5 @@
     
                      })
                  </script>
-    
     </body>
 </html> 

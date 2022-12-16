@@ -42,11 +42,18 @@ html{
     text-align: center;
     text-decoration: none;
 }
+
 .button:hover{
-    cursor: pointer;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: .5s;
+    background-color: #111;
+    color: white;
 }
+
+#date{
+    margin-left: 40%;
+    background-color: #f5ff04ff;
+    color: #111;
+}
+
 @media only screen and (max-width: 600px) {
     .columns {
         width: 100%;
