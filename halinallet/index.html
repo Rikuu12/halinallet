@@ -42,13 +42,14 @@
                        methods: {
                          findData: function ()
                          {
-                            let url1 = ("http://www.boredapi.com/api/activity/") // Tähän vaihda oikea url 
+                            let url1 = ("https://api.porssisahko.net/v1/latest-prices.json") // Tähän vaihda oikea url 
     
     
                             axios.get (url1)
                             /* Tässä suodatetaan tulevasta JSONISTA tarvittavat datat ja heijastetaan VUE/HTML osioon {{answer}} */
                             .then((response) => {
-                                let filter = response.data.activity; 
+                                let filter = response.data; 
+                                console.log(data);
     
                                 this.answer = filter ;
     
