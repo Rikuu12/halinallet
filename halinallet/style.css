@@ -6,11 +6,11 @@
 }
 html{
     height: 100%;
-    background: linear-gradient(to bottom, #f5ff04ff, #0eff27ff);
+    background: linear-gradient(to bottom, #0e90ffff, #0eeeffff);
 }
 .columns {
     margin-left: 25%;
-    width: 50%;
+    width: 60%;
     padding: 20px;
 }
 .price {
@@ -35,7 +35,7 @@ html{
 }
 
 .button {
-    background-color: #f5ff04ff;
+    background-color: #fff;
     border: none;
     color: black;
     padding: 10px 25px;
@@ -51,13 +51,22 @@ html{
 }
 
 #date{
-    margin-left: 40%;
-    background-color: #f5ff04ff;
+    width: 70%;
+    margin-left: 20%;
+    background-color: #fff;
     color: #111;
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 600px) {
     .columns {
         width: 100%;
+    }
+    #date{
+        width: 40%;
+        margin-left: 10%;
+        background-color: #fff;
+        color: #111;
+        font-size: 25px;
     }
 }
